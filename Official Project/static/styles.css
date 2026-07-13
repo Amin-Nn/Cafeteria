@@ -1,0 +1,105 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --primary: #e74c3c;
+    --secondary: #3498db;
+    --accent: #f1c40f;
+    --dark: #333;
+    --light: #ddd;
+}
+
+body { font-family: Arial, sans-serif; background: #f5f5f5; color: var(--dark); }
+.container { max-width: 1200px; margin: 0 auto; }
+
+.navbar {
+    background: var(--primary);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--dark);
+}
+
+.nav-brand { font-size: 1.5rem; font-weight: bold; color: white; }
+.nav-links { display: flex; list-style: none; gap: 1rem; flex-wrap: wrap; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 0.8rem; border: 1px solid white; }
+.nav-links a:hover { background: rgba(255,255,255,0.2); }
+.nav-links a.active { background: white; color: var(--primary); }
+
+.page { padding: 2rem; }
+.home-page { background: white; }
+.hero { text-align: center; padding: 2rem; background: var(--secondary); color: white; margin-bottom: 2rem; border: 2px solid var(--dark); }
+.hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.subtitle { font-size: 1.1rem; }
+
+.info-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.info-card { background: white; padding: 1.5rem; border: 2px solid var(--light); }
+.info-card h2 { color: var(--primary); margin-bottom: 1rem; font-size: 1.2rem; }
+.info-card p { margin-bottom: 0.5rem; color: #666; }
+
+.menu-preview { margin: 2rem 0; }
+.menu-preview h2 { text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: var(--dark); }
+.preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.preview-card { background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: var(--dark); border: 2px solid var(--light); cursor: pointer; }
+.preview-card:hover { background: #f0f0f0; border-color: var(--primary); }
+.preview-card .emoji { font-size: 2.5rem; display: block; margin-bottom: 0.5rem; }
+.preview-card h3 { font-size: 1.1rem; margin-bottom: 0.3rem; color: var(--primary); }
+.preview-card p { font-size: 0.85rem; color: #666; }
+
+.quick-links { display: flex; justify-content: center; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+.quick-link { padding: 0.7rem 1.2rem; background: var(--accent); color: var(--dark); text-decoration: none; border: 2px solid var(--dark); font-weight: bold; cursor: pointer; }
+.quick-link:hover { background: #e6b800; }
+
+.menu-page h1 { text-align: center; margin-bottom: 1.5rem; font-size: 1.8rem; color: var(--primary); }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.menu-item { background: white; padding: 1.5rem; border: 2px solid var(--light); border-left: 4px solid var(--primary); }
+.item-header { display: flex; justify-content: space-between; margin-bottom: 0.8rem; }
+.item-header h3 { font-size: 1.1rem; margin: 0; flex: 1; }
+.price { background: var(--accent); color: var(--dark); padding: 0.3rem 0.6rem; font-weight: bold; white-space: nowrap; margin-left: 0.5rem; border: 1px solid var(--dark); }
+.description { color: #666; margin-bottom: 0.8rem; font-size: 0.9rem; }
+.rating-section { display: flex; justify-content: space-between; margin-top: 1rem; border-top: 1px solid var(--light); padding-top: 0.8rem; }
+.rating-section .btn:hover { background: #3498db; color: white; }
+.rating-display { display: flex; align-items: center; gap: 0.3rem; }
+.stars { color: var(--accent); font-size: 1rem; }
+.rating-count { font-size: 0.8rem; color: #999; }
+.no-items { text-align: center; padding: 2rem; color: #999; }
+
+.btn { padding: 0.6rem 1rem; border: 2px solid var(--dark); cursor: pointer; font-size: 0.9rem; font-weight: bold; background: white; }
+.btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
+.btn-primary:hover { background: #c0392b; }
+.btn-secondary { background: #bbb; }
+.btn-secondary:hover { background: #999; }
+.btn-small { padding: 0.4rem 0.8rem; font-size: 0.8rem; }
+
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); }
+.modal-content { background: white; margin: 10% auto; padding: 1.5rem; border: 3px solid var(--dark); max-width: 450px; }
+.close { color: var(--dark); float: right; font-size: 1.5rem; font-weight: bold; cursor: pointer; }
+.close:hover { color: var(--primary); }
+.modal-content h2 { color: var(--primary); margin-bottom: 1rem; }
+
+.rating-input { text-align: center; margin-bottom: 1rem; }
+.stars-input { font-size: 2.5rem; margin: 1rem 0; letter-spacing: 0.3rem; }
+.star { color: #ddd; cursor: pointer; }
+.star:hover, .star.active { color: var(--accent); }
+#ratingText { color: var(--primary); font-weight: bold; min-height: 1.5rem; }
+
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; margin-bottom: 0.3rem; font-weight: bold; color: var(--dark); }
+.form-group input, .form-group textarea, .comment-section textarea { width: 100%; padding: 0.6rem; border: 1px solid var(--light); font-family: Arial; font-size: 0.9rem; }
+.form-group input:focus, .form-group textarea:focus, .comment-section textarea:focus { outline: none; border: 2px solid var(--primary); }
+.comment-section { margin-bottom: 1rem; }
+.comment-section label { display: block; margin-bottom: 0.3rem; font-weight: bold; color: var(--dark); }
+.comment-section textarea { resize: vertical; min-height: 80px; }
+.modal-buttons { display: flex; gap: 0.8rem; justify-content: flex-end; margin-top: 1.5rem; }
+
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; gap: 0.8rem; }
+    .nav-brand { min-width: 100%; text-align: center; }
+    .nav-links { justify-content: center; gap: 0.5rem; }
+    .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.85rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .modal-content { margin: 30% auto; width: 90%; }
+    .page { padding: 1rem; }
+}
